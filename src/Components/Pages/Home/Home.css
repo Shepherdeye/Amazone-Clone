@@ -1,0 +1,48 @@
+.home {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    background-color: #0092cb;
+    margin-right: auto;
+    max-width: 1500px;
+    /* Original for large screens */
+    overflow: hidden;
+}
+
+.home-row {
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.home-image {
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -150px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+/* Responsive Adjustments for the smallest screens */
+@media (max-width: 576px) {
+    .home {
+        max-width: 100%;
+        /* Full width on the smallest screens */
+        padding: 0 10px;
+        /* Add padding to prevent content from touching the screen edges */
+    }
+
+    .home-row {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center the items */
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .home-image {
+        margin-bottom: -50px;
+        /* Adjust margin for small screens */
+    }
+}

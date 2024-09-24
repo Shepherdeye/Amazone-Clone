@@ -1,0 +1,149 @@
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-logo {
+    margin: 0 20px;
+    margin-top: 18px;
+    width: 100px;
+    object-fit: contain;
+}
+
+.header-search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.header-searchInput {
+    height: 30px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.header-searchIcon {
+    padding: 5px;
+    height: 30px !important;
+    background-color: #cd9042;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-option {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.header-optionLineOne {
+    font-size: 10px;
+}
+
+.header-optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.header-optionBasket {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header-optionBasket .header-basketCount {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Hamburger menu button */
+.header-menuIcon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        padding: 0 10px;
+
+    }
+
+    .header-logo {
+        width: 100px;
+    }
+
+    .header-search {
+        flex: 1;
+    }
+
+    .header-nav {
+        display: none;
+        /* Hide navigation links on mobile */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #131921;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+
+    }
+
+    .header-nav.open {
+        display: flex;
+        /* Show menu when toggled */
+
+    }
+
+    .header-option {
+        margin: 10px 0;
+    }
+
+    .header-menuIcon {
+        display: block;
+
+        /* Show hamburger menu */
+    }
+
+    .header-menuIcon img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 50px;
+    }
+
+    .header-logo {
+        width: 80px;
+    }
+
+    .header-searchInput {
+        padding: 6px;
+    }
+
+    .header-basketCount {
+        font-size: 12px;
+        margin-left: 5px;
+    }
+}

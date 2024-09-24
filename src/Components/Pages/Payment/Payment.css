@@ -1,0 +1,124 @@
+/* Current styles for large and extra-large screens */
+.payment {
+    background-color: white;
+}
+
+.payment-container>h1 {
+    text-align: center;
+    padding: 10px;
+    font-weight: 400;
+    background-color: rgb(234, 237, 237);
+    border-bottom: 1px solid lightgray;
+}
+
+.payment-section {
+    display: flex;
+    padding: 20px;
+    margin: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.payment-title,
+.payment-section>h3 {
+    flex: 0.2;
+}
+
+.payment-address,
+.payment-items,
+.payment-details {
+    flex: 0.8;
+}
+
+.payment-detaills>form {
+    max-width: 400px;
+}
+
+.payment-details .payment-priceContainer>h3 {
+    padding-top: 20px;
+}
+
+.payment-details>form>div>button {
+    background-color: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88734 #9c7e31 #846a29;
+    color: #111;
+    cursor: pointer;
+}
+
+/* For medium screens (tablets, 768px and below) */
+@media (max-width: 992px) {
+    .payment-section {
+        flex-direction: column;
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .payment-title,
+    .payment-section>h3 {
+        flex: 1;
+        text-align: center;
+    }
+
+    .payment-address,
+    .payment-items,
+    .payment-details {
+        flex: 1;
+    }
+
+    .payment-detaills>form {
+        max-width: 100%;
+    }
+
+    .payment-details>form>div>button {
+        height: 35px;
+    }
+}
+
+/* For small screens (mobile landscape, 600px and below) */
+@media (max-width: 768px) {
+    .payment-container>h1 {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+
+    .payment-section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .payment-title,
+    .payment-section>h3 {
+        text-align: left;
+    }
+
+    .payment-details>form>div>button {
+        height: 40px;
+    }
+}
+
+/* For extra small screens (mobile portrait, 480px and below) */
+@media (max-width: 480px) {
+    .payment-container>h1 {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+
+    .payment-section {
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .payment-title,
+    .payment-section>h3 {
+        text-align: center;
+    }
+
+    .payment-details>form>div>button {
+        height: 45px;
+        font-size: 0.9rem;
+    }
+}

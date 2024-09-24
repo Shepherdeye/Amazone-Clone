@@ -1,0 +1,44 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": {
+    "source": "functions",
+    "codebase": "default",
+    "ignore": [
+      "node_modules",
+      ".git",
+      "firebase-debug.log",
+      "firebase-debug.*.log",
+      "*.local"
+    ],
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ]
+  },
+  "emulators": {
+    "hosting": {
+      "host": "localhost",
+      "port": 5002
+    },
+    "functions": {
+      "host": "localhost",
+      "port": 5001
+    },
+    "ui": {
+      "host": "localhost",
+      "port": 4000
+    }
+  }
+}

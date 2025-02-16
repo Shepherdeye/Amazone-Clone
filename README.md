@@ -1,7 +1,5 @@
-# Getting Started with Create React App
+<h1> Amazone Clone </h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-
+<p> this an app simulate Amazone</p>
 
 
